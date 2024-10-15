@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>章总小厨房</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .menu-container {
+            max-width: 600px;
+            margin: auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .menu {
+            display: none;
+            /* 隐藏所有菜单项 */
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #c0392b;
+            border-radius: 5px;
+            background-color: #f2d7d7;
+            text-align: center;
+        }
+
+        .menu img {
+            width: 100%;
+            /* 图片宽度为100% */
+            height: auto;
+            /* 高度自动 */
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .active {
+            display: block;
+            /* 显示当前页面的菜单项 */
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .pagination button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #c0392b;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .pagination button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-container">
+        <h1>章总小厨房</h1>
+
+        <div id="menuContainer">
+            <!-- 菜单项 -->
+            <div class="menu active">
+                <img src="./images/1.jpg" alt="宫保鸡丁">
+                <div>宫保鸡丁 - ¥18</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/2.jpg" alt="麻婆豆腐">
+                <div>麻婆豆腐 - ¥12</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/3.jpg" alt="红烧肉">
+                <div>红烧肉 - ¥32</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/4.jpg" alt="酸辣汤">
+                <div>酸辣汤 - ¥15</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/5.jpg" alt="鱼香肉丝">
+                <div>鱼香肉丝 - ¥30</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/6.jpg" alt="炸酱面">
+                <div>炸酱面 - ¥18</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/7.jpg" alt="红烧鱼">
+                <div>红烧鱼 - ¥48</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/8.jpg" alt="韭菜炒蛋">
+                <div>韭菜炒蛋 - ¥20</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/9.jpg" alt="啤酒鸭">
+                <div>啤酒鸭 - ¥128</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/10.jpg" alt="水煮牛肉">
+                <div>水煮牛肉 - ¥36</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/11.jpg" alt="章总自制炒饭">
+                <div>章总自制炒饭 - ¥16</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/12.jpg" alt="春卷">
+                <div>春卷 - ¥12</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/13.jpg" alt="香辣干锅">
+                <div>香辣干锅 - ¥10</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/14.jpg" alt="炸鸡腿">
+                <div>炸鸡腿 - ¥8</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/15.jpg" alt="红烧鸡翅">
+                <div>红烧鸡翅 - ¥5</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/16.jpg" alt="鸡蛋面">
+                <div>鸡蛋面 - ¥25</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/17.jpg" alt="鸡蛋羹">
+                <div>鸡蛋羹 - ¥15</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/18.jpg" alt="凉拌手撕鸡">
+                <div>凉拌手撕鸡 - ¥10</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/19.jpg" alt="蹄花汤">
+                <div>蹄花汤 - ¥20</div>
+            </div>
+            <div class="menu">
+                <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/20.jpg" alt="蛋挞">
+                <div>蛋挞 - ¥30</div>
+            </div>
+        </div>
+        <!-- 菜品可扩 -->
+        <div class="menu">
+            <img src="file:///C:/Users/zsome_u9mbv1k/Desktop/新建文件夹 (2)/网页/菜单图片/21.jpg" alt="想吃啥可以直接说只要我会">
+            <div>想吃啥可以直接说只要我会 - ¥待定</div>
+        </div>
+        </div>
+
+        <div class="pagination">
+            <button id="prevButton" onclick="changePage(-1)">上一页</button>
+            <button id="nextButton" onclick="changePage(1)">下一页</button>
+        </div>
+    </div>
+
+    <script>
+        let currentPage = 1;
+        const itemsPerPage = 5; // 每页显示的菜单项数量
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+        function showPage(page) {
+            const menus = document.querySelectorAll('.menu');
+            menus.forEach((menu, index) => {
+                menu.classList.remove('active'); // 移除活动类
+                if (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) {
+                    menu.classList.add('active'); // 显示当前页面的菜单项
+                }
+            });
+
+            document.getElementById('prevButton').disabled = (page === 1); // 控制上一页按钮启用状态
+            document.getElementById('nextButton').disabled = (page === totalPages); // 控制下一页按钮启用状态
+        }
+
+        function changePage(direction) {
+            currentPage += direction;
+            showPage(currentPage);
+        }
+
+        // 初始化显示第一页
+        showPage(currentPage);
+    </script>
+</body>
+
+</html>
